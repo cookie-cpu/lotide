@@ -17,19 +17,29 @@ const assertEqual = function(actual, expected) {
 //   }
 // };
 
-const eqArrays = function(first, second){
-  if (first.length === second.length){
-    for (let i = 0; i <= first.length; i++){
-      for (let j = 0; j <= second.length; j++){
-        if (first[i] === second[j]){
-          return true
-        }
-        
+// const eqArrays = function(first, second){
+//   if (first.length === second.length){
+//     for (let i = 0; i <= first.length; i++){
+//       if (first[i] !== second[1]){
+//         return false
+//       }
+//     }
+//   } return true
+// }
+
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length === arr2.length) {
+    for (let i = 0; i < arr1.length; i ++) {
+      if (arr1[i] !== arr2[i]) {
+        return false;
       }
     }
+  } else {
+    return false;
+  }
+  return true;
+};
 
-  } return false
-}
 //TEST CASES
 console.log(eqArrays([1, 2, 3], [3, 2, 1]));
 console.log(eqArrays([1, 2, 3], [1, 2, 3]));

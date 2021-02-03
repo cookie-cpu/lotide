@@ -1,8 +1,17 @@
 const without = function (source, itemsToRemove) {
   let output = [];
   for (item in itemsToRemove){
-    console.log(itemsToRemove[item])
-  }
+    //console.log(itemsToRemove[item])
+    for (item in source){
+      //console.log(source[item])
+      if (itemsToRemove[item] === source[item]){
+        console.log(source[item])
+
+      } else {
+        output.push(source[item])
+      }
+    }
+  } 
 }
 /*
 function (source, toRemove)

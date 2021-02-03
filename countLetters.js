@@ -6,3 +6,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+const countLetters = function(sentence) {
+  for (let letter in sentence) {
+    console.log(sentence[letter]);
+  }
+  
+};
+
+console.log(countLetters("Lighthouse"));

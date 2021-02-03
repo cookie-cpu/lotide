@@ -19,20 +19,20 @@ const assertArraysEqual = function(actual,expected) {
   }
 };
 
-const middle = function (array) {
+const middle = function(array) {
   if (array.length <= 2) {
     return [];
   } else if (array.length % 2 === 0) {
     //return "Even Array: " + array
-    let start = Math.floor(array.length/2)
+    let start = Math.floor(array.length / 2);
     //let end = Math.round(array.length/2) + 1
-    let end = start++
-    return [end, start]
+    let end = start++;
+    return [end, start];
   } else {
     //return "Odd Array: " + array
-    return [array[Math.floor(array.length/2)]]
+    return [array[Math.floor(array.length / 2)]];
   }
-}
+};
 
 //TEST CASES
 
@@ -51,8 +51,8 @@ console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
 console.log(middle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // => [5, 6]
 
 //
-assertArraysEqual(middle([1]), [])
-assertArraysEqual(middle([1, 2, 3]), [2])
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7]), [4])
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), [5, 6])
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4])
+assertArraysEqual(middle([1]), []);
+assertArraysEqual(middle([1, 2, 3]), [2]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7]), [4]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), [5, 6]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);

@@ -51,9 +51,14 @@ const middle = function (array) {
   if (array.length <= 2) {
     return [];
   } else if (array.length % 2 === 0) {
-    return "Even Array: " + array
+    //return "Even Array: " + array
+    let start = Math.floor(array.length/2)
+    //let end = Math.round(array.length/2) + 1
+    let end = start++
+    return [start, end]
   } else {
-    return "Odd Array: " + array
+    //return "Odd Array: " + array
+    return [array[Math.floor(array.length/2)]]
   }
 }
 
@@ -66,9 +71,11 @@ console.log(middle([1, 2])); // => []
 //Odd number of array items
 console.log(middle([1, 2, 3])); // => [2]
 console.log(middle([1, 2, 3, 4, 5]));// => [3]
+console.log(middle([1, 2, 3, 4, 5, 6, 7]));// => [4]
 
 //Even number of array items
 console.log(middle([1, 2, 3, 4])); // => [2, 3]
 console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
+console.log(middle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // => [5, 6]
 
 

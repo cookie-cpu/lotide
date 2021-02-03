@@ -1,5 +1,6 @@
 const middle = function(array){
-  
+  let mid = array.length/2
+  console.log(array[mid])
 
 }
 

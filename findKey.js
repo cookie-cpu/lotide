@@ -28,7 +28,10 @@ const takeUntil = function(array, callback) {
 //no key = undefined
 const findKey = function(object, callback){
   for (let name in object){
-    console.log(`\n`,"Name: ",name,`\n`, "Star Rating: ", object[name])
+    //console.log(`\n`,"Name: ",name,`\n`, "Star Rating: ", object[name])
+    if (callback(object[name])){
+      console.log(name)
+    }
     // if (callback(object[item])){
     //   console.log(item)
     // } else return undefined

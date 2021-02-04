@@ -14,11 +14,16 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKeyByValue = function(obj, val){
+  let keys = Object.keys(obj)
+  for (genre in keys){
+    //console.log(Object.keys(obj))
+    //console.log(keys[genre])
 
+  }
 }
 
-//TEST CASES
 
+//TEST CASES
 const bestTVShowsByGenre = { 
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",

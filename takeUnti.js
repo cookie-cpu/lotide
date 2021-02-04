@@ -1,13 +1,12 @@
 const takeUntil = function(array, callback){
   let output = [];
   for (let item in array){
-    if (!array[item] === false){
+    if (!callback(array[item])){
       output.push(array[item])
+    } else if (callback(array[item])){
+      return output
     }
   } return output
-  //Collects item from array until callback returns true
-  //Returns array
-
 }
 
 

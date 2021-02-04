@@ -12,9 +12,15 @@ const assertEqual = function(actual, expected) {
 const eqObjects = function(object1, object2) {
   let keys1 = Object.keys(object1);
   let keys2 = Object.keys(object2);
-  console.log(keys1)
-  console.log()
-  console.log(keys2)
+  if (keys2.length !== keys1.length){
+    return false
+  }
+  
+  
+  
+  // console.log(keys1)
+  // console.log()
+  // console.log(keys2)
 
 };
 

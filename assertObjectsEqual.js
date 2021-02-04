@@ -30,3 +30,7 @@ const eqArrays = function(arr1, arr2) {
 };
 
 
+const assertObjectsEqual = function(actual, expected){
+
+  
+}

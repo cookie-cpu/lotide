@@ -1,4 +1,10 @@
-const takeUtil = function(array, callback){
+const takeUntil = function(array, callback){
+  let output = [];
+  for (let item in array){
+    if (!array[item] === false){
+      output.push(array[item])
+    }
+  } return output
   //Collects item from array until callback returns true
   //Returns array
 

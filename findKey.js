@@ -31,6 +31,7 @@ const findKey = function(object, callback){
     //console.log(`\n`,"Name: ",name,`\n`, "Star Rating: ", object[name])
     if (callback(object[name])){
       console.log(name)
+      break
     }
     // if (callback(object[item])){
     //   console.log(item)

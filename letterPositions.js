@@ -3,15 +3,22 @@ return all the indices (zero-based positions)
 in the string where each character is found.
 
 For each letter, instead of returning just one number to represent its number of occurrences,
-multiple numbers may be needed to represent all the places in the string that it shows up.
+multiple numbers may be needed to represent all the indexes of the string that it shows up.
 */
 
 const letterPositions = function(sentence) {
   const results = {};
-  // logic to update results here
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] !== " ") {
+      if (results[sentence[i]]) {
+        results[sentence[i]].push(i);
+      } else {
+        results[sentence[i]] = [i];
+      }
+    }
+  }
   return results;
 };
-
 
 const eqArrays = function(arr1, arr2) {
   if (arr1.length === arr2.length) {
@@ -34,5 +41,6 @@ const assertArraysEqual = function(actual,expected) {
   }
 };
 
-console.log(assertArraysEqual(letterPositions('hello'),{h:[0], e:[1], l:[2,3], o:[4]}))
-// assertArraysEqual(letterPositions("hello").e, [1]);
+console.log(assertArraysEqual(letterPositions('hello'),{h:[0], e:[1], l:[2,3], o:[4]}));
+assertArraysEqual(letterPositions("hello").e, [1]);
+assertArraysEqual(letterPositions("helloh").h, [0, 5]);

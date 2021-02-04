@@ -1,7 +1,7 @@
 //Pair programmed by Jesse, Gio and Matt
 
-const raisinAlarm = function(cookie){
-  for (let i = 0; i <= cookie.length; i++){
+const raisinAlarm = function(cookie) {
+  for (let i = 0; i <= cookie.length; i++) {
     if (cookie[i] === "🍇") {
       return 'Raisin alert!';
     }
@@ -25,14 +25,14 @@ const raisinAlarmArray = function(cookies) {
         output.push('Raisin alert!');
       } else {
   
-    cookies.push("All good!")
+        cookies.push("All good!");
 
       }
     }
   }
   return output;
 
-}
+};
 console.log(raisinAlarmArray(
   [
     ["🍫", "🍫", "🍇", "🍫"],

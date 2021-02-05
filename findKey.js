@@ -1,20 +1,13 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`😀Assertion Passed😀: ${actual} ===  ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`😟Assertion Failed😟: ${actual} !===  ${expected}`);
-  }
-};
 
-const findKey = function(object, callback){
-  for (let name in object){
+const findKey = function(object, callback) {
+  for (let name in object) {
     //console.log(`\n`,"Name: ",name,`\n`, "Star Rating: ", object[name])
-    if (callback(object[name])){
-      console.log(name)
-      break
+    if (callback(object[name])) {
+      console.log(name);
+      break;
     }
   }
-}
+};
 
 //TEST CASES
 findKey({
